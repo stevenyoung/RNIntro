@@ -14,6 +14,26 @@ import React, {
 } from 'react-native';
 
 class NewProject extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      movies: null,
+      inputText: '...',
+    };
+  }
+
+  textChanged(params) {
+    console.log('text changed', params)
+    console.log(this.state.inputText)
+    this.setState({inputText: params.inputText})
+  }
+
+  componentDidMount() {
+    // runs once after component is loaded
+    console.log('this', this)
+    console.log('https://facebook.github.io/react-native/docs/tutorial.html#content')
+  }
+
 
   render() {
     return (
@@ -25,11 +45,13 @@ class NewProject extends Component {
           To get started, edit index.ios.js
         </Text>
         <TextInput style={styles.textInput}
-          value="Text goes here"
+          value = {this.state.inputText}
+          onChangeText = {(inputText) => this.textChanged({inputText})}
         />
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu</Text>
+        <Text>text: {this.state.inputText} </Text>
       </View>
     );
   }
