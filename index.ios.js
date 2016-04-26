@@ -65,9 +65,6 @@ class NewProject extends Component {
   }
 }
 
-
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -78,7 +75,7 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    marginTop: 40,
   },
   instructions: {
     textAlign: 'center',
@@ -94,9 +91,10 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginBottom: 20,
     marginLeft: 40,
-    padding: 5
+    paddingLeft: 20,
+    paddingRight: 20
   },
-  button : {
+  button: {
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
@@ -104,9 +102,13 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 5,
   },
-  buttonText : {
+  buttonText: {
     lineHeight: 17,
     margin: 5
+  },
+  vr: {
+    flex: 1,
+    margin: 10
   }
 });
 
