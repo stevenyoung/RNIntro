@@ -18,7 +18,7 @@ class NewProject extends Component {
     super(props);
     this.state = {
       movies: null,
-      inputText: '...',
+      inputText: '',
     };
   }
 
@@ -48,6 +48,9 @@ class NewProject extends Component {
           value = {this.state.inputText}
           onChangeText = {(inputText) => this.textChanged({inputText})}
         />
+        <View style={styles.button}>
+        <Text style={styles.buttonText}>Button Text</Text>
+        </View>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu</Text>
@@ -80,7 +83,25 @@ const styles = StyleSheet.create({
   textInput: {
     height: 40,
     borderColor: 'gray',
-    borderWidth: 1
+    borderWidth: 1,
+    borderRadius: 20,
+    marginTop: 20,
+    marginRight: 40,
+    marginBottom: 20,
+    marginLeft: 40,
+    padding: 5
+  },
+  button : {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 20,
+    padding: 5,
+    margin: 5,
+  },
+  buttonText : {
+    lineHeight: 17,
+    margin: 5
   }
 });
 
