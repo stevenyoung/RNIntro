@@ -7,6 +7,7 @@
 import React, {
   AppRegistry,
   Component,
+  Image,
   StyleSheet,
   Text,
   TextInput,
@@ -41,8 +42,12 @@ class NewProject extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <Image
+          style={styles.vr}
+          source={require('./vr.jpg')}
+        />
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          Type a search term:
         </Text>
         <TextInput style={styles.textInput}
           value = {this.state.inputText}
