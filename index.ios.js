@@ -9,10 +9,12 @@ import React, {
   Component,
   StyleSheet,
   Text,
+  TextInput,
   View
 } from 'react-native';
 
 class NewProject extends Component {
+
   render() {
     return (
       <View style={styles.container}>
@@ -22,14 +24,19 @@ class NewProject extends Component {
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
+        <TextInput style={styles.textInput}
+          value="Text goes here"
+        />
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+          Cmd+D or shake for dev menu</Text>
       </View>
     );
   }
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -48,6 +55,11 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  textInput: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1
+  }
 });
 
 AppRegistry.registerComponent('NewProject', () => NewProject);
